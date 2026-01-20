@@ -1,0 +1,92 @@
+      @keyframes slideBeam1 {
+        0% {
+          transform: translateX(-100%) translateY(-100%) rotate(-45deg);
+        }
+        100% {
+          transform: translateX(200%) translateY(200%) rotate(-45deg);
+        }
+      }
+
+      @keyframes slideBeam2 {
+        0% {
+          transform: translateX(-150%) translateY(-150%) rotate(-45deg);
+        }
+        100% {
+          transform: translateX(250%) translateY(250%) rotate(-45deg);
+        }
+      }
+
+      @keyframes slideBeam3 {
+        0% {
+          transform: translateX(-120%) translateY(-120%) rotate(-45deg);
+        }
+        100% {
+          transform: translateX(220%) translateY(220%) rotate(-45deg);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .beam {
+        position: absolute;
+        width: 200%;
+        height: 300px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(234, 179, 8, 0.1) 20%,
+          rgba(234, 179, 8, 0.3) 50%,
+          rgba(234, 179, 8, 0.1) 80%,
+          transparent 100%
+        );
+        filter: blur(40px);
+      }
+
+      .beam-1 {
+        animation: slideBeam1 15s linear infinite;
+        top: 10%;
+      }
+
+      .beam-2 {
+        animation: slideBeam2 20s linear infinite;
+        top: 40%;
+        animation-delay: -5s;
+      }
+
+      .beam-3 {
+        animation: slideBeam3 18s linear infinite;
+        top: 70%;
+        animation-delay: -10s;
+      }
+
+      .glow-circle {
+        animation: pulse 4s ease-in-out infinite;
+      }
+
+      .profile-glow {
+        box-shadow:
+          0 0 60px rgba(234, 179, 8, 0.4),
+          0 0 120px rgba(234, 179, 8, 0.2),
+          inset 0 0 40px rgba(234, 179, 8, 0.1);
+      }
+
+      .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+            transition: max-height 0.4s ease-in;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
