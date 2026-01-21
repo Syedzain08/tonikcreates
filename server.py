@@ -1,11 +1,14 @@
 from flask import Flask, render_template, send_from_directory
 from flask_frozen import Freezer
+from shutil import copy
 import yaml
 import os
 
 
 app = Flask(__name__)
 freezer = Freezer(app=app)
+src_config = os.path.join("static", "admin", "config.yml")
+dest_config = os.path.join("build", "admin", "config.yml")
 
 
 def load_data(filename):
@@ -72,3 +75,4 @@ if __name__ == "__main__":
     app.config["FREEZER_BASE_URL"] = "https://tonikcreates.vercel.app/"
     freezer.init_app(app)
     freezer.freeze()
+    copy(src_config, dest_config)
