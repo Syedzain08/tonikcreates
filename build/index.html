@@ -43,7 +43,6 @@
 />
 
 
-
     <title>Home - T0N1K</title>
   </head>
   <body class="font-primary bg-black text-white min-h-screen overflow-x-hidden">
@@ -143,101 +142,94 @@
 </script> 
 
 <section class="relative" id="hero">
-  <!-- Animated Background -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none">
     <div class="beam beam-1"></div>
     <div class="beam beam-2"></div>
     <div class="beam beam-3"></div>
 
     <div
-      class="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl glow-circle"
+      class="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-yellow-500/20 rounded-full blur-3xl glow-circle"
     ></div>
     <div
-      class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/20 rounded-full blur-3xl glow-circle"
+      class="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-yellow-600/20 rounded-full blur-3xl glow-circle"
       style="animation-delay: -2s"
     ></div>
   </div>
 
-  <!-- Content -->
   <div class="relative z-10">
     <div
-      class="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] px-4"
+      class="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] px-6 py-12"
     >
       <div class="relative mb-8">
         <div
-          class="w-72 h-72 rounded-full overflow-hidden border-4 border-dashed border-yellow-400 profile-glow"
+          class="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-dashed border-yellow-400 profile-glow"
         >
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&amp;h=400&amp;fit=crop"
             alt="Profile"
             class="w-full h-full object-cover"
           />
         </div>
-
         <div
           class="absolute inset-0 rounded-full bg-linear-to-r from-transparent via-yellow-400/30 to-transparent blur-xl -z-10"
         ></div>
       </div>
 
-      <h1 class="text-7xl md:text-8xl font-black text-yellow-400 mb-6">
+      <h1
+        class="text-5xl md:text-8xl font-black text-yellow-400 mb-6 text-center"
+      >
         T0N1K<span class="text-white">.</span>
       </h1>
 
       <p
-        class="text-center max-w-3xl text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+        class="text-center max-w-3xl text-base md:text-xl text-gray-300 mb-8 leading-relaxed"
       >
-        Transforming raw footage into captivating stories, I specialize in
-        dynamic editing, color grading, and visual effects to create stunning
-        visual narratives. Let's bring your vision to life with creativity and
-        precision.
+        Transforming raw footage into captivating stories, I specialize in dynamic editing, color grading, and visual effects to create stunning visual narratives. Let&#39;s bring your vision to life with creativity and precision.
       </p>
 
       <a
         href="/"
-        class="bg-yellow-400 text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-yellow-400/50 hover:scale-105 hover:cursor-pointer"
+        class="bg-yellow-400 text-black px-6 py-3 md:px-8 md:py-4 rounded-full text-md md:text-lg font-bold transition-all shadow-lg shadow-yellow-400/50 hover:scale-105 hover:cursor-pointer"
       >
         Increase Your Retention Rate
       </a>
     </div>
   </div>
 </section>
-<section id="portfolio" class="mt-12 mb-12">
-  <h2 class="text-6xl text-center text-yellow-400 font-black">
+
+<section id="portfolio" class="mt-12 mb-12 px-4">
+  <h2 class="text-4xl md:text-6xl text-center text-yellow-400 font-black">
     My Best Work<span class="text-white">.</span>
   </h2>
 
-  <h3 class="text-3xl text-center text-yellow-400 font-black mt-12">
+  <h3 class="text-2xl md:text-3xl text-center text-yellow-400 font-black mt-12">
     Short Form
   </h3>
 
-  <h4 class="text-xl text-center text-yellow-400 font-black mt-12">
+  <h4 class="text-lg md:text-xl text-center text-yellow-400 font-black mt-6">
     Educational
   </h4>
-  <!-- Swiper Container -->
+
   <div class="swiper educationalSwiper mt-8 mx-auto">
     <div class="swiper-wrapper">
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -245,39 +237,33 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 1
             </h3>
           </div>
         </div>
       </div>
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -285,39 +271,33 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 2
             </h3>
           </div>
         </div>
       </div>
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -325,39 +305,33 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 3
             </h3>
           </div>
         </div>
       </div>
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -365,39 +339,33 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 4
             </h3>
           </div>
         </div>
       </div>
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -405,39 +373,33 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 5
             </h3>
           </div>
         </div>
       </div>
       
-      <!-- Card -->
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
-          <!-- Thumbnail Image -->
           <img
             src="https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg"
             alt="Video thumbnail"
             class="absolute inset-0 w-full h-full object-cover"
           />
-
-          <!-- Play Button Overlay -->
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
           >
             <div
-              class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
             >
               <svg
-                class="w-8 h-8 text-white ml-1"
+                class="w-6 h-6 md:w-8 md:h-8 text-white ml-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -445,12 +407,10 @@
               </svg>
             </div>
           </div>
-
-          <!-- Title Overlay -->
           <div
             class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent py-4 px-3 pointer-events-none"
           >
-            <h3 class="text-lg md:text-xl font-bold text-center text-white">
+            <h3 class="text-base md:text-xl font-bold text-center text-white">
               Slide 6
             </h3>
           </div>
@@ -458,36 +418,44 @@
       </div>
       
     </div>
-
-    <!-- Navigation buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next hidden md:flex"></div>
+    <div class="swiper-button-prev hidden md:flex"></div>
   </div>
   <div class="swiper-pagination relative! mt-8!"></div>
 </section>
 
 <section id="stats" class="mt-12 mb-12 bg-yellow-200/25 text-white">
-  <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-3 gap-4 md:gap-8">
+  <div
+    class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+  >
+    
     <div class="text-center">
-      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">150+</h2>
+      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">
+        150+
+      </h2>
       <p class="mt-1 md:mt-2 text-sm md:text-lg font-semibold">
         Projects Completed
       </p>
     </div>
-
+    
     <div class="text-center">
-      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">5M</h2>
+      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">
+        5M
+      </h2>
       <p class="mt-1 md:mt-2 text-sm md:text-lg font-semibold">
         Total Views Generated
       </p>
     </div>
-
+    
     <div class="text-center">
-      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">2 Years</h2>
+      <h2 class="text-3xl md:text-5xl text-yellow-400 font-bold">
+        2 Years
+      </h2>
       <p class="mt-1 md:mt-2 text-sm md:text-lg font-semibold">
         Industry Experience
       </p>
     </div>
+    
   </div>
 </section>
 
@@ -495,31 +463,34 @@
   id="get-started"
   class="mt-20 mb-20 py-16 bg-white/5 border-y border-yellow-400/10 backdrop-blur-sm"
 >
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-6">
     <h2
-      class="text-5xl md:text-7xl text-center text-yellow-400 mb-4 font-black"
+      class="text-4xl md:text-7xl text-center text-yellow-400 mb-4 font-black"
     >
       The Finish Line<span class="text-white">.</span>
     </h2>
-    <h3 class="text-xl text-center text-gray-400 mb-16">
+    <h3 class="text-lg md:text-xl text-center text-gray-400 mb-12 md:mb-16">
       Three steps to high-retention content
     </h3>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
-         
+        
         <div
           class="group flex items-start gap-4 p-6 rounded-2xl bg-yellow-400/5 border border-yellow-400/10 hover:border-yellow-400/40 transition-all"
         >
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
+            class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
           >
             01
           </div>
           <div>
-            <h4 class="text-2xl font-bold text-white mb-1">Briefing</h4>
-            <p class="text-gray-400 leading-relaxed">Fill out the Google Form with your
-        project details and vision.</p>
+            <h4 class="text-xl md:text-2xl font-bold text-white mb-1">
+              Briefing
+            </h4>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+              Fill out the Google Form with your project details and vision.
+            </p>
           </div>
         </div>
         
@@ -527,14 +498,17 @@
           class="group flex items-start gap-4 p-6 rounded-2xl bg-yellow-400/5 border border-yellow-400/10 hover:border-yellow-400/40 transition-all"
         >
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
+            class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
           >
             02
           </div>
           <div>
-            <h4 class="text-2xl font-bold text-white mb-1">Strategy</h4>
-            <p class="text-gray-400 leading-relaxed">We jump on a quick
-        chat to finalize the style and hooks.</p>
+            <h4 class="text-xl md:text-2xl font-bold text-white mb-1">
+              Strategy
+            </h4>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+              We jump on a quick chat to finalize the style and hooks.
+            </p>
           </div>
         </div>
         
@@ -542,20 +516,23 @@
           class="group flex items-start gap-4 p-6 rounded-2xl bg-yellow-400/5 border border-yellow-400/10 hover:border-yellow-400/40 transition-all"
         >
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
+            class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-yellow-400 text-black font-black shrink-0"
           >
             03
           </div>
           <div>
-            <h4 class="text-2xl font-bold text-white mb-1">Delivery</h4>
-            <p class="text-gray-400 leading-relaxed">Sit back as
-        I transform your raw footage into a masterpiece.</p>
+            <h4 class="text-xl md:text-2xl font-bold text-white mb-1">
+              Delivery
+            </h4>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+              Sit back as I transform your raw footage into a masterpiece.
+            </p>
           </div>
         </div>
         
       </div>
 
-      <div class="relative group">
+      <div class="relative group mt-8 md:mt-0">
         <div
           class="absolute -inset-1 bg-yellow-400/20 rounded-3xl blur-xl group-hover:bg-yellow-400/30 transition-all"
         ></div>
@@ -563,36 +540,34 @@
           class="relative bg-black border border-yellow-400/30 p-8 md:p-12 rounded-3xl text-center"
         >
           <p
-            class="text-yellow-400 font-bold uppercase tracking-widest text-sm mb-4"
+            class="text-yellow-400 font-bold uppercase tracking-widest text-xs md:text-sm mb-4"
           >
             Immediate Openings Available
           </p>
-          <h4 class="text-3xl md:text-4xl font-black text-white mb-8">
+          <h4 class="text-2xl md:text-4xl font-black text-white mb-8">
             Ready to dominate the algorithm?
           </h4>
-
           <a
             href="YOUR_GOOGLE_FORM_LINK"
             target="_blank"
-            class="block w-full bg-yellow-400 text-black py-5 rounded-full text-xl font-black uppercase hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/20 mb-8"
+            class="block w-full bg-yellow-400 text-black py-4 md:py-5 rounded-full text-lg md:text-xl font-black uppercase hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/20 mb-8"
           >
             Start Your Project
           </a>
-
           <div
-            class="flex flex-col md:flex-row items-center justify-center gap-6 border-t border-gray-800 pt-8"
+            class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 border-t border-gray-800 pt-8"
           >
             <a
-              href="tel:+123456789"
+              href="tel:+1234567890"
               class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
             >
               <span class="material-symbols-outlined text-sm">call</span>
               <span class="font-bold">+1 234 567 890</span>
             </a>
             <span class="hidden md:block text-gray-700">|</span>
-            <div class="flex gap-4">
-              <p class="text-gray-500 text-sm">WhatsApp available 24/7</p>
-            </div>
+            <p class="text-gray-500 text-xs md:text-sm text-center">
+              WhatsApp available 24/7
+            </p>
           </div>
         </div>
       </div>
@@ -600,111 +575,28 @@
   </div>
 </section>
 
-<section id="get-started" class="mt-12 mb-12">
-  <h2 class="text-4xl md:text-6xl text-center text-yellow-400 mb-2 font-black">
-    Get Started In A Jiffy<span class="text-white">.</span>
-  </h2>
-  <h3 class="text-xl text-center text-white mb-12">
-    Getting started is simple and quick
-  </h3>
-
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row items-stretch gap-8">
-      <div class="md:w-1/2 flex flex-col gap-6">
-        <!-- Step 1 -->
-        <div
-          class="flex-1 flex items-start gap-4 p-6 rounded-lg shadow-lg bg-linear-to-r to-yellow-200/10 from-yellow-400/30"
-        >
-          <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-bold text-xl shrink-0"
-          >
-            1
-          </div>
-          <div>
-            <h4 class="text-3xl font-semibold">Step 1</h4>
-            <p class="mt-2">
-              Click the get started button and fill out the form with your
-              details. Once submitted, we will get back to you shortly.
-            </p>
-          </div>
-        </div>
-        <!-- Step 2 -->
-        <div
-          class="flex-1 flex items-start gap-4 p-6 rounded-lg shadow-lg bg-linear-to-r to-yellow-200/10 from-yellow-400/30"
-        >
-          <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-bold text-xl shrink-0"
-          >
-            2
-          </div>
-          <div>
-            <h4 class="text-3xl font-semibold">Step 2</h4>
-            <p class="mt-2">
-              we get in touch to discuss your project requirements and what
-              works best for you.
-            </p>
-          </div>
-        </div>
-        <!-- Step 3 -->
-        <div
-          class="flex-1 flex items-start gap-4 p-6 rounded-lg shadow-lg bg-linear-to-r to-yellow-200/10 from-yellow-400/30"
-        >
-          <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-black font-bold text-xl shrink-0"
-          >
-            3
-          </div>
-          <div>
-            <h4 class="text-3xl font-semibold">Step 3</h4>
-            <p class="mt-2">
-              Sit back and relax! Watch as your vision comes to life through our
-              expert video editing services.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="md:w-1/2">
-        <img
-          src="https://img.youtube.com/vi/nMuTgStG8w0/maxresdefault.jpg"
-          alt="Our Process"
-          class="w-full h-full rounded-lg shadow-lg object-cover"
-        />
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center mt-12">
-    <a
-      href="/"
-      class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-yellow-400/50 hover:scale-105 hover:cursor-pointer"
-    >
-      Get Started
-    </a>
-  </div>
-</section>
-<section id="faqs" class="mt-12 mb-12 py-16">
+<section id="faqs" class="mt-12 mb-12 py-16 px-6">
   <h2 class="text-4xl md:text-6xl text-center text-yellow-400 mb-4 font-black">
-    FAQ's<span class="text-white">.</span>
+    Frequently Asked Questions<span class="text-white">.</span>
   </h2>
-  <h3 class="text-xl text-center text-gray-300 mb-12">
-    Answers to your most common questions
+  <h3 class="text-lg md:text-xl text-center text-gray-300 mb-12">
+    Everything you need to know about working with T0N1K.
   </h3>
 
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="space-y-4">
-      <!-- FAQ 1 -->
+  <div class="container mx-auto max-w-4xl">
+    
+    <div class="space-y-4 mb-6">
       <div
         class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
       >
         <button
-          class="accordion-btn w-full flex items-center justify-between p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
         >
-          <h4 class="text-xl md:text-2xl font-semibold text-yellow-400">
-            Lorem ipsum dolor sit amet?
+          <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
+            What video editing services do you offer?
           </h4>
           <svg
-            class="w-6 h-6 text-yellow-400 transition-transform duration-300"
+            class="w-5 h-5 md:w-6 md:h-6 text-yellow-400 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -718,89 +610,141 @@
           </svg>
         </button>
         <div class="accordion-content">
-          <div class="px-6 pb-6 text-gray-300">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div
-        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
-      >
-        <button
-          class="accordion-btn w-full flex items-center justify-between p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
-        >
-          <h4 class="text-xl md:text-2xl font-semibold text-yellow-400">
-            Consectetur adipiscing elit sed?
-          </h4>
-          <svg
-            class="w-6 h-6 text-yellow-400 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button>
-        <div class="accordion-content">
-          <div class="px-6 pb-6 text-gray-300">
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div
-        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
-      >
-        <button
-          class="accordion-btn w-full flex items-center justify-between p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
-        >
-          <h4 class="text-xl md:text-2xl font-semibold text-yellow-400">
-            Tempor incididunt ut labore et?
-          </h4>
-          <svg
-            class="w-6 h-6 text-yellow-400 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button>
-        <div class="accordion-content">
-          <div class="px-6 pb-6 text-gray-300">
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
+          <div class="px-6 pb-6 text-sm md:text-base text-gray-300">
+            <p>I specialize in transforming raw footage into compelling visual stories through dynamic editing, professional color grading, and cinematic visual effects.</p>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="space-y-4 mb-6">
+      <div
+        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
+      >
+        <button
+          class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+        >
+          <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
+            What types of projects do you work on?
+          </h4>
+          <svg
+            class="w-5 h-5 md:w-6 md:h-6 text-yellow-400 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div class="accordion-content">
+          <div class="px-6 pb-6 text-sm md:text-base text-gray-300">
+            <p>I work on a wide range of projects including YouTube videos, social media content, short films, promotional videos, and branded visual storytelling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-4 mb-6">
+      <div
+        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
+      >
+        <button
+          class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+        >
+          <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
+            How long does a typical project take?
+          </h4>
+          <svg
+            class="w-5 h-5 md:w-6 md:h-6 text-yellow-400 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div class="accordion-content">
+          <div class="px-6 pb-6 text-sm md:text-base text-gray-300">
+            <p>Turnaround time usually ranges from a few days to two weeks, depending on the project scope, footage length, and revision requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-4 mb-6">
+      <div
+        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
+      >
+        <button
+          class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+        >
+          <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
+            Do you offer revisions?
+          </h4>
+          <svg
+            class="w-5 h-5 md:w-6 md:h-6 text-yellow-400 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div class="accordion-content">
+          <div class="px-6 pb-6 text-sm md:text-base text-gray-300">
+            <p>Yes, revisions are included to ensure the final video matches your vision with precision and creative polish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-4 mb-6">
+      <div
+        class="border border-yellow-400/30 rounded-lg overflow-hidden bg-yellow-400/5"
+      >
+        <button
+          class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+        >
+          <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
+            Where are you based and who do you work with?
+          </h4>
+          <svg
+            class="w-5 h-5 md:w-6 md:h-6 text-yellow-400 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div class="accordion-content">
+          <div class="px-6 pb-6 text-sm md:text-base text-gray-300">
+            <p>I work remotely with creators and brands worldwide, offering flexible collaboration across different time zones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 
@@ -885,6 +829,21 @@
             />
           </svg>
         </a>
+        <a
+          href="#"
+          class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+          aria-label="Instagram"
+        >
+          <svg
+            class="w-7 h-7 md:w-10 md:h-10"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            />
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -961,17 +920,14 @@
   
 <script>
   const accordionBtns = document.querySelectorAll(".accordion-btn");
-
   accordionBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const content = btn.nextElementSibling;
       const icon = btn.querySelector("svg");
-
       content.classList.toggle("active");
-      icon.classList.toggle("rotate-180");
+      icon.classList.toggle("rotate-270");
     });
   });
 </script>
-
 
 </html>

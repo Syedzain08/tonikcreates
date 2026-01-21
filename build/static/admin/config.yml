@@ -1,0 +1,71 @@
+local_backend: true
+backend:
+  name: git-gateway
+
+media_folder: "static/img"
+public_folder: "/static/img"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page Hero & Stats"
+        file: "content/home.yml"
+        fields:
+          - {label: "Hero Section", name: "hero", widget: "object", fields: [
+              {label: "Profile Image", name: "profile_image", widget: "image"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Button Text", name: "cta_text", widget: "string"},
+              {label: "Button Link", name: "cta_link", widget: "string"}
+            ]}
+          - {label: "Stats Counter", name: "stats", widget: "list", fields: [
+              {label: "Number", name: "number", widget: "string"},
+              {label: "Label", name: "label", widget: "string"}
+            ]}
+
+      - name: "get_started"
+        label: "Get Started Section"
+        file: "content/get_started.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Steps", name: "steps", widget: "list", fields: [
+              {label: "ID (Number)", name: "id", widget: "string"},
+              {label: "Step Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+            ]}
+          - {label: "Card CTA", name: "card_cta", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Button Text", name: "button_text", widget: "string"},
+              {label: "Button Link", name: "button_link", widget: "string"}
+            ]}
+            
+      - name: "FAQ"
+        label: "Frequently Asked Questions Section"
+        file: "content/faq.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Questions & Answers"
+            name: "questions"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "markdown"}
+
+      - name: "settings"
+        label: "Site Settings (Navbar/Footer)"
+        file: "content/settings.yml"
+        fields:
+          - {label: "Email", name: "contact_email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "WhatsApp Note", name: "whatsapp_note", widget: "string"}
+          - {label: "Social Links", name: "socials", widget: "object", fields: [
+              {label: "Upwork URL", name: "upwork", widget: "string"},
+              {label: "Discord URL", name: "discord", widget: "string"},
+              {label: "WhatsApp URL", name: "whatsapp", widget: "string"},
+              {label: "X/Twitter URL", name: "x_twitter", widget: "string"},
+              {label: "Instagram URL", name: "instagram", widget: "string"}
+            ]}

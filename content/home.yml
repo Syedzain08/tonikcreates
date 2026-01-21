@@ -1,0 +1,15 @@
+hero:
+  profile_image: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop
+  title: T0N1K
+  description: Transforming raw footage into captivating stories, I specialize in
+    dynamic editing, color grading, and visual effects to create stunning visual
+    narratives. Let's bring your vision to life with creativity and precision.
+  cta_text: Increase Your Retention Rate
+  cta_link: /
+stats:
+  - number: 150+
+    label: Projects Completed
+  - number: 5M
+    label: Total Views Generated
+  - number: 2 Years
+    label: Industry Experience
