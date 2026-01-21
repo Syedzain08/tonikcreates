@@ -2,6 +2,11 @@ backend:
   name: github
   repo: Syedzain08/tonikcreates
   branch: master
+  base_url: https://tonikcreates.vercel.app
+  auth_endpoint: api/auth
+
+site_url: https://tonikcreates.vercel.app
+display_url: https://tonikcreates.vercel.app
 
 media_folder: "static/img"
 public_folder: "/static/img"
