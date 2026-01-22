@@ -1,17 +1,17 @@
-title: "The Finish Line"
-subtitle: "Three steps to high-retention content"
+title: The Finish Line
+subtitle: Three steps to high-retention content
 steps:
   - id: "01"
-    title: "Briefing"
-    description: "Fill out the Google Form with your project details and vision."
+    title: Briefing
+    description: Fill out the Google Form with your project details and vision.
   - id: "02"
-    title: "Strategy"
-    description: "We jump on a quick chat to finalize the style and hooks."
+    title: Strategy
+    description: We jump on a quick chat to finalize the style and hooks.
   - id: "03"
-    title: "Delivery"
-    description: "Sit back as I transform your raw footage into a masterpiece."
+    title: Delivery
+    description: Sit back as I transform your raw footage into a masterpiece.
 card_cta:
-  preheading: "Immediate Openings Available"
-  title: "Ready to dominate the algorithm?"
-  button_text: "Start Your Project"
-  button_link: "https://google.com/"
+  preheading: Immediate Openings Available
+  title: Ready to dominate the algorithm?
+  button_text: Start Your Project
+  button_link: /
