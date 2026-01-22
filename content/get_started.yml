@@ -11,6 +11,7 @@ steps:
     title: "Delivery"
     description: "Sit back as I transform your raw footage into a masterpiece."
 card_cta:
+  preheading: "Immediate Openings Available"
   title: "Ready to dominate the algorithm?"
   button_text: "Start Your Project"
-  button_link: "YOUR_GOOGLE_FORM_LINK"
+  button_link: "https://google.com/"

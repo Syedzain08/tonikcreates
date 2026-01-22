@@ -7,6 +7,9 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ seo.site_description }}" />
+    <meta name="keywords" content="{{ seo.site_keywords }}" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
@@ -19,6 +22,81 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="858185ca-9f6b-40ef-a200-f554b132f07d"
+    ></script>
+    <link rel="icon" type="image/svg+xml" href="{{ seo.logo }}" />
+
+    <link rel="canonical" href="{{ request.url }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{{ seo.og.type }}" />
+    <meta property="og:title" content="{{ seo.og.title }}" />
+    <meta property="og:description" content="{{ seo.og.description }}" />
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta property="og:image" content="{{ seo.og.image }}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="{{ seo.twitter.card }}" />
+    <meta name="twitter:title" content="{{ seo.twitter.title }}" />
+    <meta name="twitter:description" content="{{ seo.twitter.description }}" />
+    <meta name="twitter:image" content="{{ seo.og.image }}" />
+    {% if seo.twitter.handle %}
+    <meta name="twitter:site" content="{{ seo.twitter.handle }}" />
+    {% endif %}
+
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ settings.site_name }}",
+        "url": "https://tonikcreates.vercel.app",
+        "image": "{{ hero.profile_image }}",
+        "jobTitle": "{{ seo.schema.person.job_title }}",
+        "description": "{{ hero.description }}",
+        "telephone": "{{ settings.phone }}",
+        "email": "{{ settings.footer.contact_email }}",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{ seo.schema.location.locality }}",
+          "addressRegion": "{{ seo.schema.location.region }}",
+          "addressCountry": "{{ seo.schema.location.country }}"
+        },
+        "knowsAbout": {{ seo.schema.person.knows_about | tojson }},
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Video Editor",
+          "occupationalCategory": "27-4032.00"
+        },
+        "offers": {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Professional Video Editing Services",
+            "serviceType": {{ seo.schema.person.service_types | tojson }}
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "{{ seo.schema.person.area_served }}"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ seo.schema.rating.value }}",
+          "reviewCount": "{{ seo.schema.rating.count }}"
+        },
+        "sameAs": [
+          "{{ settings.footer.socials.upwork }}",
+          "{{ settings.footer.socials.instagram }}",
+          "{{ settings.footer.socials.x_twitter }}"
+        ]
+      }
+    </script>
+
+    <meta name="theme-color" content="{{ seo.theme_color }}" />
 
     <style>
       .swiper-button-next,
@@ -38,17 +116,17 @@
 
     {% block head %}{% endblock %}
 
-    <title>{% block title %}{% endblock %} - T0N1K</title>
+    <title>{% block title %}{% endblock %} - {{ settings.site_name }}</title>
   </head>
   <body class="font-primary bg-black text-white min-h-screen overflow-x-hidden">
-    {% include 'partials/navbar.html' %} {% block content %}{% endblock %}{%
+    {% include 'partials/navbar.html' %} {% block content %}{% endblock %} {%
     include 'partials/footer.html' %}
   </body>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const swiper = new Swiper(".educationalSwiper", {
+      const swiper = new Swiper(".portfolioSwiper", {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
@@ -89,21 +167,19 @@
 
       document.querySelectorAll(".swiper-slide").forEach((slide) => {
         slide.addEventListener("click", function () {
-          // Get the video ID from the thumbnail src
           const img = this.querySelector("img");
           const thumbnailUrl = img.src;
           const videoId = thumbnailUrl.match(/\/vi\/([^/]+)\//)[1];
 
-          // Create iframe
           const iframe = document.createElement("iframe");
           iframe.className = "absolute inset-0 w-full h-full";
           iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
           iframe.frameBorder = "0";
           iframe.allow =
             "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.setAttribute("allowfullscreen", "");
           iframe.allowFullscreen = true;
 
-          // Replace content with iframe
           const container = this.querySelector(".relative");
           container.innerHTML = "";
           container.appendChild(iframe);

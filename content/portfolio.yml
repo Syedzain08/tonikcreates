@@ -1,0 +1,49 @@
+title: My Best Work
+subtitle: High-quality video editing tailored for your brand's growth.
+categories:
+  - category_name: Short Form
+    subcategories:
+      - subcategory_name: Educational
+        videos:
+          - title: Mastering Color Grading
+            video_id: ohymkBe4zhg
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+      - subcategory_name: Entertainment
+        videos:
+          - title: Vlog Edit 01
+            video_id: 3JZ_D3ELwOQ
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+          - title: Sound Design 101
+            video_id: dQw4w9WgXcQ
+            image: ""
+  - category_name: Long Form
+    subcategories:
+      - subcategory_name: Documentaries
+        videos:
+          - title: The Art of Storytelling
+            video_id: EZ6TEjx7JLw
+            image: ""
+          - title: The Art of Storytelling
+            video_id: EZ6TEjx7JLw
+            image: ""
+          - title: The Art of Storytelling
+            video_id: EZ6TEjx7JLw
+            image: ""
+          - title: The Art of Storytelling
+            video_id: EZ6TEjx7JLw
+            image: ""

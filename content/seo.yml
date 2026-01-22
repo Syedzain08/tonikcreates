@@ -1,0 +1,45 @@
+site_description: Transforming raw footage into captivating stories.
+  Professional video editing, color grading, and visual effects with 6+ years
+  experience and 150+ completed projects.
+site_keywords: video editing, video editor, color grading, visual effects,
+  motion graphics, YouTube editing, commercial video production, professional
+  video editor
+logo: 
+og:
+  title: TON1K - High Quality Video Editing
+  description: Fast, High Quality & Affordable Video Editing
+  type: website
+  image:
+twitter:
+  card: summary_large_image
+  title: TON1K - High Quality Video Editing
+  description: Fast, High Quality & Affordable Video Editing
+  image:
+  handle: "@WaxehToKo"
+theme_color: "#facc15"
+schema:
+  person:
+    job_title: Professional Video Editor & Content Creator
+    price_range: $$
+    area_served: Worldwide
+    knows_about:
+      - Video Editing
+      - Adobe Premiere Pro
+      - DaVinci Resolve
+      - After Effects
+      - Color Grading
+      - Visual Effects
+      - Motion Graphics
+    service_types:
+      - Video Editing
+      - Color Grading
+      - Visual Effects
+      - Motion Graphics
+      - Post-Production
+  rating:
+    value: "5.0"
+    count: "150"
+  location:
+    locality: Lahore
+    region: Punjab
+    country: PK

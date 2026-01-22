@@ -2,21 +2,23 @@
   class="relative flex items-center justify-between px-6 md:px-12 py-6 z-50 font-primary"
   x-data="{ mobileMenuOpen: false }"
 >
-  <div class="text-2xl font-black text-yellow-400">
-    {{ home.hero.title }}<span class="text-white">.</span>
-  </div>
+  <a href="/">
+    <div class="text-2xl font-black text-yellow-400">
+      {{ settings.site_name }}<span class="text-white">.</span>
+    </div>
+  </a>
 
   <div class="hidden md:flex items-center gap-8 text-gray-300">
-    <a href="#portfolio" class="hover:text-yellow-400 transition-colors"
-      >Portfolio</a
+    {% for link in settings.navbar.links %}
+    <a href="{{ link.url }}" class="hover:text-yellow-400 transition-colors"
+      >{{ link.display_text }}</a
     >
-    <a href="#hero" class="hover:text-yellow-400 transition-colors">About</a>
-    <a href="#faqs" class="hover:text-yellow-400 transition-colors">FAQ's</a>
+    {% endfor %}
     <a
-      href="#get-started"
+      href="{{ settings.navbar.cta_button.url }}"
       class="bg-yellow-400 text-black px-6 py-2.5 rounded-full font-semibold hover:bg-yellow-300 transition-colors cursor-pointer shadow-lg shadow-yellow-400/20"
     >
-      Get Started
+      {{ settings.navbar.cta_button.display_text }}
     </a>
   </div>
 
@@ -39,38 +41,27 @@
     x-transition:enter-end="opacity-100 translate-y-0"
     class="absolute top-full left-0 right-0 bg-black/95 border-b border-yellow-400/20 py-8 flex flex-col items-center gap-6 md:hidden backdrop-blur-md"
   >
+    {% for link in settings.navbar.links %}
     <a
-      href="#portfolio"
+      href="{{ link.url }}"
       @click="mobileMenuOpen = false"
       class="text-xl text-white hover:text-yellow-400"
-      >Portfolio</a
+      >{{ link.display_text }}</a
     >
-    <a
-      href="#hero"
-      @click="mobileMenuOpen = false"
-      class="text-xl text-white hover:text-yellow-400"
-      >About</a
-    >
-    <a
-      href="#faqs"
-      @click="mobileMenuOpen = false"
-      class="text-xl text-white hover:text-yellow-400"
-      >FAQ's</a
-    >
+    {% endfor %}
     <div class="items-center">
       <a
-        href="#get-started"
+        href="{{ settings.navbar.cta_button.url }}"
         @click="mobileMenuOpen = false"
         class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold w-11/12 max-w-xs hover:cursor-pointer"
       >
-        Get Started
+        {{ settings.navbar.cta_button.display_text }}
       </a>
     </div>
   </div>
 </nav>
 <script>
   // Smooth scrolling for anchor links
-
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const hash = this.getAttribute("href");

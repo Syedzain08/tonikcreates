@@ -1,9 +1,23 @@
-contact_email: "contact@tonik.com"
-phone: "+1 234 567 890"
-whatsapp_note: "WhatsApp available 24/7"
-socials:
-  upwork: "#"
-  discord: "#"
-  whatsapp: "#"
-  x_twitter: "#"
-  instagram: "#"
+phone: +1 234 567 890
+site_name: TON1K
+whatsapp_note: WhatsApp available 24/7
+navbar:
+  links:
+    - display_text: Portfolio
+      url: "#portfolio"
+    - display_text: About
+      url: "#hero"
+    - display_text: FAQ's
+      url: "#faqs"
+  cta_button:
+    display_text: Get Started
+    url: "#get-started"
+footer:
+  contact_email: contact@tonik.com
+  copyright_year: "2026"
+  socials:
+    upwork: "#"
+    discord: "#"
+    whatsapp: "#"
+    x_twitter: "#"
+    instagram: "#"

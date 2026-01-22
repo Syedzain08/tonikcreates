@@ -1,20 +1,39 @@
-from flask import Flask, render_template, send_from_directory, redirect, url_for
+from flask import Flask, render_template, send_from_directory, Response, url_for
 from flask_frozen import Freezer
 from shutil import copy
-import yaml
-import os
+from dotenv import load_dotenv
+from yaml import safe_load
+from os import path
 
 
 app = Flask(__name__)
 freezer = Freezer(app=app)
-src_config = os.path.join("static", "admin", "config.yml")
-dest_config = os.path.join("build", "admin", "config.yml")
+src_config = path.join("static", "admin", "config.yml")
+dest_config = path.join("build", "admin", "config.yml")
+
+
+load_dotenv()
 
 
 def load_data(filename):
-    path = os.path.join("content", filename)
-    with open(path, "r") as f:
-        return yaml.safe_load(f)
+
+    load_path = path.join("content", filename)
+    with open(load_path, "r") as f:
+        return safe_load(f)
+
+
+@app.context_processor
+def inject_settings():
+    with open("content/settings.yml", "r") as f:
+        settings = safe_load(f)
+
+    with open("content/home.yml", "r") as f:
+        home = safe_load(f)
+
+    with open("content/seo.yml", "r") as f:
+        seo = safe_load(f)
+
+    return {"settings": settings, "hero": home.get("hero", {}), "seo": seo}
 
 
 @app.route("/")
@@ -23,45 +42,15 @@ def index():
     get_started = load_data("get_started.yml")
     settings = load_data("settings.yml")
     faq = load_data("faq.yml")
-    swiper1_data = [
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 1",
-            "video_id": "ohymkBe4zhg",
-        },
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 2",
-            "video_id": "ohymkBe4zhg",
-        },
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 3",
-            "video_id": "ohymkBe4zhg",
-        },
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 4",
-            "video_id": "ohymkBe4zhg",
-        },
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 5",
-            "video_id": "ohymkBe4zhg",
-        },
-        {
-            "image": "https://img.youtube.com/vi/ohymkBe4zhg/maxresdefault.jpg",
-            "title": "Slide 6",
-            "video_id": "ohymkBe4zhg",
-        },
-    ]
+    portfolio = load_data("portfolio.yml")
+
     return render_template(
         "index.html",
-        swiper1_data=swiper1_data,
         home=home,
         get_started=get_started,
         settings=settings,
         faq=faq,
+        portfolio=portfolio,
     )
 
 
@@ -69,6 +58,36 @@ def index():
 @app.route("/admin/<path:path>")
 def admin(path="index.html"):
     return send_from_directory("static/admin", path)
+
+
+# -- Robots Route -- #
+@app.route("/robots.txt")
+def robots_txt():
+    lines = [
+        "User-agent: *",
+        "Disallow:",
+        f"Sitemap: {url_for('sitemap', _external=True)}",
+    ]
+    return Response("\n".join(lines), mimetype="text/plain")
+
+
+# --- Sitemap Route---- #
+@app.route("/sitemap.xml")
+def sitemap():
+    urls = [
+        {"loc": url_for("index", _external=True), "priority": "1.0"},
+    ]
+
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>']
+    xml.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+    for url in urls:
+        xml.append("  <url>")
+        xml.append(f"    <loc>{url['loc']}</loc>")
+        xml.append(f"    <priority>{url['priority']}</priority>")
+        xml.append("  </url>")
+    xml.append("</urlset>")
+
+    return Response("\n".join(xml), mimetype="text/xml")
 
 
 if __name__ == "__main__":

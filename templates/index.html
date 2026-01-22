@@ -63,27 +63,32 @@
 
 <section id="portfolio" class="mt-12 mb-12 px-4">
   <h2 class="text-4xl md:text-6xl text-center text-yellow-400 font-black">
-    My Best Work<span class="text-white">.</span>
+    {{ portfolio.title }}<span class="text-white">.</span>
   </h2>
+  <p class="text-center text-gray-400 mt-2">{{ portfolio.subtitle }}</p>
 
-  <h3 class="text-2xl md:text-3xl text-center text-yellow-400 font-black mt-12">
-    Short Form
+  {% for category in portfolio.categories %}
+  <h3
+    class="text-2xl md:text-3xl text-center text-yellow-400 font-black mt-12 uppercase"
+  >
+    {{ category.category_name }}
   </h3>
 
-  <h4 class="text-lg md:text-xl text-center text-yellow-400 font-black mt-6">
-    Educational
+  {% for sub in category.subcategories %}
+  <h4 class="text-lg md:text-xl text-center text-white font-bold mt-6">
+    {{ sub.subcategory_name }}
   </h4>
 
-  <div class="swiper educationalSwiper mt-8 mx-auto">
+  <div class="swiper portfolioSwiper mt-8 mx-auto">
     <div class="swiper-wrapper">
-      {% for item in swiper1_data %}
+      {% for item in sub.videos %}
       <div class="swiper-slide">
         <div
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
           <img
-            src="{{ item.image }}"
-            alt="Video thumbnail"
+            src="{{ item.image if item.image else 'https://img.youtube.com/vi/' + item.video_id + '/maxresdefault.jpg' }}"
+            alt="{{ item.title }}"
             class="absolute inset-0 w-full h-full object-cover"
           />
           <div
@@ -114,8 +119,9 @@
     </div>
     <div class="swiper-button-next hidden md:flex"></div>
     <div class="swiper-button-prev hidden md:flex"></div>
+    <div class="swiper-pagination relative! mt-8!"></div>
   </div>
-  <div class="swiper-pagination relative! mt-8!"></div>
+  {% endfor %} {% endfor %}
 </section>
 
 <section id="stats" class="mt-12 mb-12 bg-yellow-200/25 text-white">
@@ -182,13 +188,14 @@
           <p
             class="text-yellow-400 font-bold uppercase tracking-widest text-xs md:text-sm mb-4"
           >
-            Immediate Openings Available
+            {{ get_started.card_cta.preheading }}
           </p>
           <h4 class="text-2xl md:text-4xl font-black text-white mb-8">
             {{ get_started.card_cta.title }}
           </h4>
           <a
             href="{{ get_started.card_cta.button_link }}"
+            rel="noopener noreferrer"
             target="_blank"
             class="block w-full bg-yellow-400 text-black py-4 md:py-5 rounded-full text-lg md:text-xl font-black uppercase hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/20 mb-8"
           >
@@ -206,7 +213,7 @@
             </a>
             <span class="hidden md:block text-gray-700">|</span>
             <p class="text-gray-500 text-xs md:text-sm text-center">
-              WhatsApp available 24/7
+              {{ settings.whatsapp_note }}
             </p>
           </div>
         </div>

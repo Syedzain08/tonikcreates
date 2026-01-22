@@ -4,20 +4,21 @@
       <div class="flex items-center gap-2 text-gray-400 order-1">
         <span class="material-symbols-outlined text-yellow-400">mail</span>
         <a
-          href="mailto:{{ settings.contact_email }}"
+          href="mailto:{{ settings.footer.contact_email }}"
           class="hover:text-yellow-400 transition-colors duration-300 text-lg"
         >
-          {{ settings.contact_email }}
+          {{ settings.footer.contact_email }}
         </a>
       </div>
 
       <p class="text-gray-400 text-sm md:text-base order-3 md:order-2">
-        © 2026 T0N1K. All rights reserved.
+        © {{ settings.footer.copyright_year }} {{ settings.site_name }}. All
+        rights reserved.
       </p>
 
       <div class="flex items-center justify-center gap-6 order-2 md:order-3">
         <a
-          href="{{ settings.socials.upwork }}"
+          href="{{ settings.footer.socials.upwork }}"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="Upwork"
         >
@@ -33,7 +34,7 @@
         </a>
 
         <a
-          href="{{ settings.socials.discord }}"
+          href="{{ settings.footer.socials.discord }}"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="Discord"
         >
@@ -49,7 +50,7 @@
         </a>
 
         <a
-          href="{{ settings.socials.whatsapp }}"
+          href="{{ settings.footer.socials.whatsapp }}"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="WhatsApp"
         >
@@ -65,7 +66,7 @@
         </a>
 
         <a
-          href="{{ settings.socials.x_twitter }}"
+          href="{{ settings.footer.socials.x_twitter }}"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="X"
         >
@@ -80,7 +81,7 @@
           </svg>
         </a>
         <a
-          href="{{ settings.socials.instagram }}"
+          href="{{ settings.footer.socials.instagram }}"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="Instagram"
         >

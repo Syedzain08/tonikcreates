@@ -31,6 +31,30 @@ collections:
               {label: "Number", name: "number", widget: "string"},
               {label: "Label", name: "label", widget: "string"}
             ]}
+  
+      - name: "portfolio"
+        label: "Portfolio Section"
+        file: "content/portfolio.yml"
+        fields:
+          - {label: "Section Title", name: "title", widget: "string"}
+          - {label: "Section Subtitle", name: "subtitle", widget: "string"}
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+                - {label: "Category Name", name: "category_name", widget: "string"} 
+                - label: "Sub-Categories"
+                  name: "subcategories"
+                  widget: "list"
+                  fields:
+                    - {label: "Sub-Category Name", name: "subcategory_name", widget: "string"} 
+                    - label: "Videos"
+                      name: "videos"
+                      widget: "list"
+                      fields:
+                        - {label: "Video Title", name: "title", widget: "string"}
+                        - {label: "YouTube Video ID", name: "video_id", widget: "string", hint: "The part after v= in the URL"}
+                        - {label: "Custom Thumbnail", name: "image", widget: "image", required: false, hint: "Leave blank to use YouTube default"}
 
       - name: "get_started"
         label: "Get Started Section"
@@ -44,6 +68,7 @@ collections:
               {label: "Description", name: "description", widget: "text"}
             ]}
           - {label: "Card CTA", name: "card_cta", widget: "object", fields: [
+              {label: "Pre-Heading", name: "preheading", widget: "string"},
               {label: "Title", name: "title", widget: "string"},
               {label: "Button Text", name: "button_text", widget: "string"},
               {label: "Button Link", name: "button_link", widget: "string"}
@@ -66,13 +91,107 @@ collections:
         label: "Site Settings (Navbar/Footer)"
         file: "content/settings.yml"
         fields:
-          - {label: "Email", name: "contact_email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Site Name", name: "site_name", widget: "string"}
           - {label: "WhatsApp Note", name: "whatsapp_note", widget: "string"}
-          - {label: "Social Links", name: "socials", widget: "object", fields: [
-              {label: "Upwork URL", name: "upwork", widget: "string"},
-              {label: "Discord URL", name: "discord", widget: "string"},
-              {label: "WhatsApp URL", name: "whatsapp", widget: "string"},
-              {label: "X/Twitter URL", name: "x_twitter", widget: "string"},
-              {label: "Instagram URL", name: "instagram", widget: "string"}
-            ]}
+
+          - label: "Navbar"
+            name: "navbar"
+            widget: "object"
+            fields:
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Display Text", name: "display_text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "CTA Button"
+                name: "cta_button"
+                widget: "object"
+                fields:
+                  - {label: "Display Text", name: "display_text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields: 
+              - {label: "Contact Email", name: "contact_email", widget: "string"}
+              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
+              - label: "Social Links"
+                name: "socials"
+                widget: "object"
+                fields:
+                  - {label: "Upwork URL", name: "upwork", widget: "string"}
+                  - {label: "Discord URL", name: "discord", widget: "string"}
+                  - {label: "WhatsApp URL", name: "whatsapp", widget: "string"}
+                  - {label: "X/Twitter URL", name: "x_twitter", widget: "string"}
+                  - {label: "Instagram URL", name: "instagram", widget: "string"}
+
+
+      - name: "seo"
+        label: "SEO & Meta Tags"
+        file: "content/seo.yml"
+        fields:
+          - {label: "Site Description", name: "site_description", widget: "text", hint: "Description for search engines (150-160 characters)"}
+          - {label: "Site Keywords", name: "site_keywords", widget: "string", hint: "Comma-separated keywords"}
+          - {label: "Logo", name: "logo", widget: "image"}
+          
+          - label: "Open Graph (Facebook/LinkedIn)"
+            name: "og"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "OG Title", name: "title", widget: "string"}
+              - {label: "OG Description", name: "description", widget: "text"}
+              - {label: "OG Type", name: "type", widget: "string", default: "website"}
+              - {label: "OG Image", name: "image", widget: "image", hint: "Recommended: 1200x630px"}
+          
+          - label: "Twitter Card"
+            name: "twitter"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Card Type", name: "card", widget: "select", options: ["summary", "summary_large_image"], default: "summary_large_image"}
+              - {label: "Twitter Title", name: "title", widget: "string"}
+              - {label: "Twitter Description", name: "description", widget: "text"}
+              - {label: "Twitter Image", name: "image", widget: "image"}
+              - {label: "Twitter Handle", name: "handle", widget: "string", required: false, hint: "e.g. @tonik"}
+          
+          - {label: "Theme Color", name: "theme_color", widget: "string", hint: "Hex color for mobile browser (e.g. #facc15)"}
+          
+          - label: "Schema.org Settings"
+            name: "schema"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Person Info"
+                name: "person"
+                widget: "object"
+                fields:
+                  - {label: "Job Title", name: "job_title", widget: "string"}
+                  - {label: "Price Range", name: "price_range", widget: "string", hint: "e.g. $$"}
+                  - {label: "Area Served", name: "area_served", widget: "string", default: "Worldwide"}
+                  - label: "Skills/Knowledge"
+                    name: "knows_about"
+                    widget: "list"
+                    field: {label: "Skill", name: "skill", widget: "string"}
+                  - label: "Service Types"
+                    name: "service_types"
+                    widget: "list"
+                    field: {label: "Service", name: "service", widget: "string"}
+              
+              - label: "Rating"
+                name: "rating"
+                widget: "object"
+                fields:
+                  - {label: "Rating Value", name: "value", widget: "string", hint: "e.g. 5.0"}
+                  - {label: "Review Count", name: "count", widget: "string", hint: "Number of reviews/projects"}
+              
+              - label: "Location"
+                name: "location"
+                widget: "object"
+                fields:
+                  - {label: "City", name: "locality", widget: "string"}
+                  - {label: "State/Region", name: "region", widget: "string"}
+                  - {label: "Country Code", name: "country", widget: "string", hint: "2-letter code (e.g. PK)"}
