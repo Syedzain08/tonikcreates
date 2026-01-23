@@ -9,12 +9,12 @@ og:
   title: TON1K - High Quality Video Editing
   description: Fast, Reliable & High Quality Video Editing
   type: website
-  image: /static/img/share-banner.png
+  image: /static/img/share-banner.jpeg
 twitter:
   card: summary_large_image
   title: TON1K - High Quality Video Editing
   description: Fast, Reliable & High Quality Video Editing
-  image: /static/img/share-banner.png
+  image: /static/img/share-banner.jpeg
   handle: "@WaxehToKo"
 theme_color: "#facc15"
 schema:
