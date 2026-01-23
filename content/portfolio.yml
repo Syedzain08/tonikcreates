@@ -5,45 +5,51 @@ categories:
     subcategories:
       - subcategory_name: Educational
         videos:
-          - title: Mastering Color Grading
-            video_id: ohymkBe4zhg
+          - title: Example 1
+            video_id: 3IcWExmN1UE
             image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
+          - title: Example 2
+            video_id: U1dKkcaCnwk
             image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
+          - title: Example 3
+            video_id: 7XbzVVuhKMg
             image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
+          - title: Example 4
+            video_id: 1CZp5Zync9Y
             image: ""
+          - title: Example 5
+            video_id: ALjbmPiRTEw
+          - title: Example 6
+            video_id: tNnhfxU3M4k
       - subcategory_name: Entertainment
         videos:
-          - title: Vlog Edit 01
-            video_id: 3JZ_D3ELwOQ
+          - title: Example 1
+            video_id: m-B9kMmuHec
             image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
-            image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
-            image: ""
-          - title: Sound Design 101
-            video_id: dQw4w9WgXcQ
-            image: ""
-  - category_name: Long Form
-    subcategories:
+      - subcategory_name: Advertisements
+        videos:
+          - title: Example 1
+            video_id: ChXmYSuNbCM
       - subcategory_name: Documentaries
         videos:
-          - title: The Art of Storytelling
-            video_id: EZ6TEjx7JLw
-            image: ""
-          - title: The Art of Storytelling
-            video_id: EZ6TEjx7JLw
-            image: ""
-          - title: The Art of Storytelling
-            video_id: EZ6TEjx7JLw
-            image: ""
-          - title: The Art of Storytelling
-            video_id: EZ6TEjx7JLw
-            image: ""
+          - title: Example 1
+            video_id: y3x-bikiMgo
+          - title: Example 2
+            video_id: 58Oolbp7BTM
+      - subcategory_name: Gaming
+        videos:
+          - title: Example 1
+            video_id: EktqorEADXM
+          - title: Example 2
+            video_id: I4Pok4AMfJw
+          - title: Example 3
+            video_id: kcXyWyG9Djo
+          - title: Example 4
+            video_id: niqMP3_eFXA
+  - category_name: Long Form
+    subcategories:
+      - videos:
+          - video_id: ZpiVraqsSjA
+            title: 2HYPE NBA Basketball Family Feud
+          - video_id: RL6SQKvs010
+            title: "The Great Real Estate Shift: Adapt or Your Brokerage Will Die"
