@@ -3,7 +3,7 @@ from flask_frozen import Freezer
 from shutil import copy
 from dotenv import load_dotenv
 from yaml import safe_load
-from os import path
+from os import path, getenv
 
 
 app = Flask(__name__)
@@ -13,6 +13,7 @@ dest_config = path.join("build", "admin", "config.yml")
 
 
 load_dotenv()
+site_url = getenv("SITE_URL")
 
 
 def load_data(filename):
@@ -33,7 +34,12 @@ def inject_settings():
     with open("content/seo.yml", "r") as f:
         seo = safe_load(f)
 
-    return {"settings": settings, "hero": home.get("hero", {}), "seo": seo}
+    return {
+        "settings": settings,
+        "hero": home.get("hero", {}),
+        "seo": seo,
+        "site_url": site_url,
+    }
 
 
 @app.route("/")
@@ -91,7 +97,19 @@ def sitemap():
 
 
 if __name__ == "__main__":
-    app.config["FREEZER_BASE_URL"] = "https://tonikcreates.vercel.app/"
+    with open("static/admin/config.yml", "r") as f:
+        config_content = f.read()
+
+    import re
+
+    config_content = re.sub(r"(site_url:\s*).*", f"\\1{site_url}", config_content)
+    config_content = re.sub(r"(display_url:\s*).*", f"\\1{site_url}", config_content)
+    config_content = re.sub(r"(base_url:\s*).*", f"\\1{site_url}", config_content)
+
+    with open("static/admin/config.yml", "w") as f:
+        f.write(config_content)
+
+    app.config["FREEZER_BASE_URL"] = site_url
     freezer.init_app(app)
     freezer.freeze()
     copy(src_config, dest_config)

@@ -36,13 +36,13 @@
     <meta property="og:title" content="{{ seo.og.title }}" />
     <meta property="og:description" content="{{ seo.og.description }}" />
     <meta property="og:url" content="{{ request.url }}" />
-    <meta property="og:image" content="{{ seo.og.image }}" />
+    <meta property="og:image" content="{{ site_url }}{{ seo.og.image }}" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="{{ seo.twitter.card }}" />
     <meta name="twitter:title" content="{{ seo.twitter.title }}" />
     <meta name="twitter:description" content="{{ seo.twitter.description }}" />
-    <meta name="twitter:image" content="{{ seo.og.image }}" />
+    <meta name="twitter:image" content="{{ site_url }}{{ seo.og.image }}" />
     {% if seo.twitter.handle %}
     <meta name="twitter:site" content="{{ seo.twitter.handle }}" />
     {% endif %}
