@@ -4,7 +4,7 @@ site_description: Transforming raw footage into captivating stories.
 site_keywords: video editing, video editor, color grading, visual effects,
   motion graphics, YouTube editing, commercial video production, professional
   video editor
-logo: /
+logo: /static/img/logo.svg
 og:
   title: TON1K - High Quality Video Editing
   description: Fast, Reliable & High Quality Video Editing
