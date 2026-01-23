@@ -7,16 +7,12 @@ categories:
         videos:
           - title: Example 1
             video_id: 3IcWExmN1UE
-            image: ""
           - title: Example 2
             video_id: U1dKkcaCnwk
-            image: ""
           - title: Example 3
             video_id: 7XbzVVuhKMg
-            image: ""
           - title: Example 4
             video_id: 1CZp5Zync9Y
-            image: ""
           - title: Example 5
             video_id: ALjbmPiRTEw
           - title: Example 6
@@ -25,26 +21,19 @@ categories:
         videos:
           - title: Example 1
             video_id: m-B9kMmuHec
-            image: ""
-      - subcategory_name: Advertisements
-        videos:
-          - title: Example 1
+          - title: Example 2
             video_id: ChXmYSuNbCM
-      - subcategory_name: Documentaries
-        videos:
-          - title: Example 1
-            video_id: y3x-bikiMgo
-          - title: Example 2
-            video_id: 58Oolbp7BTM
-      - subcategory_name: Gaming
-        videos:
-          - title: Example 1
-            video_id: EktqorEADXM
-          - title: Example 2
-            video_id: I4Pok4AMfJw
           - title: Example 3
-            video_id: kcXyWyG9Djo
+            video_id: y3x-bikiMgo
           - title: Example 4
+            video_id: 58Oolbp7BTM
+          - title: Example 5
+            video_id: EktqorEADXM
+          - title: Example 6
+            video_id: I4Pok4AMfJw
+          - title: Example 7
+            video_id: kcXyWyG9Djo
+          - title: Example 8
             video_id: niqMP3_eFXA
   - category_name: Long Form
     subcategories:
