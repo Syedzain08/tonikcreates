@@ -49,7 +49,7 @@ collections:
                   name: "subcategories"
                   widget: "list"
                   fields:
-                    - {label: "Sub-Category Name", name: "subcategory_name", widget: "string"} 
+                    - {label: "Sub-Category Name", name: "subcategory_name", widget: "string", required: false} 
                     - label: "Videos"
                       name: "videos"
                       widget: "list"

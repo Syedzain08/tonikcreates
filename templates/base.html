@@ -169,7 +169,7 @@
         slide.addEventListener("click", function () {
           const img = this.querySelector("img");
           const thumbnailUrl = img.src;
-          const videoId = thumbnailUrl.match(/\/vi\/([^/]+)\//)[1];
+          const videoId = thumbnailUrl.match(/\/vi_webp\/([^/]+)\//)[1];
 
           const iframe = document.createElement("iframe");
           iframe.className = "absolute inset-0 w-full h-full";

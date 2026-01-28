@@ -87,9 +87,12 @@
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
           <img
-            src="{{ item.image if item.image else 'https://img.youtube.com/vi/' + item.video_id + '/maxresdefault.jpg' }}"
+            src="{{ item.image or 'https://i.ytimg.com/vi_webp/' ~ item.video_id ~ '/maxresdefault.webp' }}"
             alt="{{ item.title }}"
             class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            onload="if(this.naturalWidth === 120) { this.removeAttribute('onload'); this.src='https:\x2f\x2fi.ytimg.com/vi_webp/{{ item.video_id }}/hqdefault.webp'; }"
+            onerror="this.onerror=null; this.src='https:\x2f\x2fi.ytimg.com/vi_webp/{{ item.video_id }}/hqdefault.webp';"
           />
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
