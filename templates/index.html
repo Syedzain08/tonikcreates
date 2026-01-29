@@ -53,6 +53,8 @@
 
       <a
         href="{{ home.hero.cta_link }}"
+        data-umami-event="hero_cta_click"
+        data-umami-event-cta="hero-cta"
         class="bg-yellow-400 text-black px-6 py-3 md:px-8 md:py-4 rounded-full text-md md:text-lg font-bold transition-all shadow-lg shadow-yellow-400/50 hover:scale-105 hover:cursor-pointer"
       >
         {{ home.hero.cta_text }}
@@ -198,6 +200,8 @@
           </h4>
           <a
             href="{{ get_started.card_cta.button_link }}"
+            data-umami-event="get-started-card-cta-click"
+            data-umami-event-cta="get-started-card-cta"
             rel="noopener noreferrer"
             target="_blank"
             class="block w-full bg-yellow-400 text-black py-4 md:py-5 rounded-full text-lg md:text-xl font-black uppercase hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/20 mb-8"
@@ -210,6 +214,8 @@
             <a
               href="tel:{{ settings.phone|replace(' ', '') }}"
               class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+              data-umami-event="get-started-call-cta-click"
+              data-umami-event-cta="get-started-call-cta"
             >
               <span class="material-symbols-outlined text-sm">call</span>
               <span class="font-bold">{{ settings.phone }}</span>
@@ -241,6 +247,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="{{ q.question }}"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             {{ q.question }}

@@ -128,7 +128,7 @@
   class="relative flex items-center justify-between px-6 md:px-12 py-6 z-50 font-primary"
   x-data="{ mobileMenuOpen: false }"
 >
-  <a href="/">
+  <a href="/" data-umami-event="navbar-home-click" data-umami-event-cta="logo">
     <div class="text-2xl font-black text-yellow-400">
       TON1K<span class="text-white">.</span>
     </div>
@@ -136,20 +136,34 @@
 
   <div class="hidden md:flex items-center gap-8 text-gray-300">
     
-    <a href="#portfolio" class="hover:text-yellow-400 transition-colors"
+    <a
+      href="#portfolio"
+      class="hover:text-yellow-400 transition-colors"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="portfolio"
       >Portfolio</a
     >
     
-    <a href="#hero" class="hover:text-yellow-400 transition-colors"
+    <a
+      href="#hero"
+      class="hover:text-yellow-400 transition-colors"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="about"
       >About</a
     >
     
-    <a href="#faqs" class="hover:text-yellow-400 transition-colors"
+    <a
+      href="#faqs"
+      class="hover:text-yellow-400 transition-colors"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="faq&#39;s"
       >FAQ&#39;s</a
     >
     
     <a
       href="#get-started"
+      data-umami-event="navbar-cta-click"
+      data-umami-event-cta="navbar-cta"
       class="bg-yellow-400 text-black px-6 py-2.5 rounded-full font-semibold hover:bg-yellow-300 transition-colors cursor-pointer shadow-lg shadow-yellow-400/20"
     >
       Get Started
@@ -178,6 +192,8 @@
     
     <a
       href="#portfolio"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="portfolio"
       @click="mobileMenuOpen = false"
       class="text-xl text-white hover:text-yellow-400"
       >Portfolio</a
@@ -185,6 +201,8 @@
     
     <a
       href="#hero"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="about"
       @click="mobileMenuOpen = false"
       class="text-xl text-white hover:text-yellow-400"
       >About</a
@@ -192,6 +210,8 @@
     
     <a
       href="#faqs"
+      data-umami-event="navbar-link-click"
+      data-umami-event-link="faq&#39;s"
       @click="mobileMenuOpen = false"
       class="text-xl text-white hover:text-yellow-400"
       >FAQ&#39;s</a
@@ -200,6 +220,8 @@
     <div class="items-center">
       <a
         href="#get-started"
+        data-umami-event="navbar-cta-click"
+        data-umami-event-cta="navbar-cta"
         @click="mobileMenuOpen = false"
         class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold w-11/12 max-w-xs hover:cursor-pointer"
       >
@@ -280,6 +302,8 @@
 
       <a
         href="/"
+        data-umami-event="hero_cta_click"
+        data-umami-event-cta="hero-cta"
         class="bg-yellow-400 text-black px-6 py-3 md:px-8 md:py-4 rounded-full text-md md:text-lg font-bold transition-all shadow-lg shadow-yellow-400/50 hover:scale-105 hover:cursor-pointer"
       >
         Increase Your Retention Rate
@@ -536,12 +560,12 @@
           class="relative w-full pb-[56.25%] overflow-hidden hover:cursor-pointer rounded-lg shadow-xl group"
         >
           <img
-            src="https://i.ytimg.com/vi_webp/https://youtube.com/shorts/JI2yI9Yzym4?si=qzfqiQjmd7bU692w/maxresdefault.webp"
+            src="https://i.ytimg.com/vi_webp/JI2yI9Yzym4/maxresdefault.webp"
             alt="Example 7 "
             class="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
-            onload="if(this.naturalWidth === 120) { this.removeAttribute('onload'); this.src='https:\x2f\x2fi.ytimg.com/vi_webp/https://youtube.com/shorts/JI2yI9Yzym4?si=qzfqiQjmd7bU692w/hqdefault.webp'; }"
-            onerror="this.onerror=null; this.src='https:\x2f\x2fi.ytimg.com/vi_webp/https://youtube.com/shorts/JI2yI9Yzym4?si=qzfqiQjmd7bU692w/hqdefault.webp';"
+            onload="if(this.naturalWidth === 120) { this.removeAttribute('onload'); this.src='https:\x2f\x2fi.ytimg.com/vi_webp/JI2yI9Yzym4/hqdefault.webp'; }"
+            onerror="this.onerror=null; this.src='https:\x2f\x2fi.ytimg.com/vi_webp/JI2yI9Yzym4/hqdefault.webp';"
           />
           <div
             class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all"
@@ -1104,6 +1128,8 @@
           </h4>
           <a
             href="https://forms.gle/MytworGEHaPsy6dZ9/"
+            data-umami-event="get-started-card-cta-click"
+            data-umami-event-cta="get-started-card-cta"
             rel="noopener noreferrer"
             target="_blank"
             class="block w-full bg-yellow-400 text-black py-4 md:py-5 rounded-full text-lg md:text-xl font-black uppercase hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/20 mb-8"
@@ -1116,6 +1142,8 @@
             <a
               href="tel:+923052584473"
               class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+              data-umami-event="get-started-call-cta-click"
+              data-umami-event-cta="get-started-call-cta"
             >
               <span class="material-symbols-outlined text-sm">call</span>
               <span class="font-bold">+92 305 2584473</span>
@@ -1147,6 +1175,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="What video editing services do you offer?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             What video editing services do you offer?
@@ -1179,6 +1209,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="What types of projects do you work on?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             What types of projects do you work on?
@@ -1211,6 +1243,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="How long does a typical project take?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             How long does a typical project take?
@@ -1243,6 +1277,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="Do you offer revisions?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             Do you offer revisions?
@@ -1275,6 +1311,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="Where are you based and who do you work with?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             Where are you based and who do you work with?
@@ -1307,6 +1345,8 @@
       >
         <button
           class="accordion-btn w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-yellow-400/10 transition-colors hover:cursor-pointer"
+          data-umami-event="faq_question_toggle"
+          data-umami-event-question="What softwares do you use for editing?"
         >
           <h4 class="text-lg md:text-2xl font-semibold text-yellow-400">
             What softwares do you use for editing?
@@ -1344,6 +1384,8 @@
         <a
           href="mailto:awtgamezz@gmail.com"
           class="hover:text-yellow-400 transition-colors duration-300 text-lg"
+          data-umami-event="footer-contact-email-click"
+          data-umami-event-link="footer-contact-email"
         >
           awtgamezz@gmail.com
         </a>
@@ -1358,6 +1400,8 @@
         <a
           href="https://www.upwork.com/freelancers/tonikc"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+          data-umami-event="footer-upwork-click"
+          data-umami-event-link="footer-upwork"
           aria-label="Upwork"
         >
           <svg
@@ -1374,6 +1418,8 @@
         <a
           href="https://discord.gg/f438t3YWA"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+          data-umami-event="footer-discord-click"
+          data-umami-event-link="footer-discord"
           aria-label="Discord"
         >
           <svg
@@ -1391,6 +1437,8 @@
           href="https://wa.me/+923052584473"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
           aria-label="WhatsApp"
+          data-umami-event="footer-whatsapp-click"
+          data-umami-event-link="footer-whatsapp"
         >
           <svg
             class="w-7 h-7 md:w-10 md:h-10"
@@ -1406,6 +1454,8 @@
         <a
           href="https://x.com/WaxehToKo"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+          data-umami-event="footer-x-twitter-click"
+          data-umami-event-link="footer-x-twitter"
           aria-label="X"
         >
           <svg
@@ -1421,6 +1471,8 @@
         <a
           href="https://www.instagram.com/waxeh_baig"
           class="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+          data-umami-event="footer-instagram-click"
+          data-umami-event-link="footer-instagram"
           aria-label="Instagram"
         >
           <svg
